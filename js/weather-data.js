@@ -38,7 +38,6 @@ input.addEventListener('input', () => {
 })
 
 const geolocationSuccess = (position) => window.location.search = `?latitude=${(position.coords.latitude).toFixed(2)}&longitude=${(position.coords.longitude).toFixed(2)}`
-
 const geolocationError = () => window.location.search = `?city=Москва`
 
 // Генерируем нужную ссылку
