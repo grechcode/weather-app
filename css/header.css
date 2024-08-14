@@ -1,0 +1,127 @@
+.header {
+    height: 112px;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#desktop-logo {
+    width: 192px;
+    height: 48px;
+}
+
+#mobile-logo {
+    width: 54px;
+    height: 48px;
+    display: none;
+}
+
+.header__form {
+    box-sizing: border-box;
+    width: 506px;
+    height: 48px;
+    color: var(--disabled-text-color);
+    background: var(--element-background);
+    border-radius: var(--radius);
+    padding-inline: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.header__form-input {
+    width: 434px;
+    transition: var(--transition);
+    text-transform: capitalize;
+}
+
+.header__form-input::placeholder {
+    text-transform: none;
+}
+
+.header__form:hover,
+.header__form:focus-within {
+    background: var(--active-element-background);
+}
+
+.header__form-button[type='reset'] {
+    transition: var(--transition);
+    display: none;
+}
+
+.header__form-button[type='reset']:hover {
+    filter: contrast(200%);
+}
+
+.header__form-input:valid ~ .header__form-button[type='reset'] {
+    display: block;
+}
+
+.header__form-input:valid ~ .header__form-button[type='submit'] {
+    display: none;
+}
+
+@media (min-width: 320px) and (max-width: 1023px) {
+    #desktop-logo {
+        display: none;
+    }
+    #mobile-logo {
+        display: block;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+    #mobile-logo {
+        width: 32px;
+    }
+    .header {
+        height: 64px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .header__form {
+        width: 84.2%;
+        height: 32px;
+        padding-inline: 12px;
+    }
+    .header__form-input {
+        width: 93%;
+    }
+    .header__form-button img {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+    .header__form {
+        width: 70.8%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 885px) {
+    .header {
+        height: 96px;
+    }
+    .header__form {
+        width: 71.7%;
+    }
+    .header__form-input {
+        width: 85%;
+    }
+}
+
+@media (min-width: 886px) and (max-width: 1023px) {
+    .header {
+        height: 96px;
+    }
+    .header__form {
+        width: 75.6%;
+    }
+    .header__form-input {
+        width: 93.6%;
+    }
+}

@@ -1,0 +1,113 @@
+.main {
+    height: 472px;
+    display: grid;
+    grid-template-columns: 1fr 506px;
+    align-items: center;
+    padding-block: 32px;
+}
+
+.main__weather,
+.today,
+.other {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main__weather {
+    height: 408px;
+    padding: 8px;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.today {
+    height: 96px;
+}
+
+.temp {
+    height: 112px;
+    font-size: 112px;
+    font-weight: 700;
+    line-height: 112px;
+}
+
+.other {
+    height: 56px;
+}
+
+.other__info {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.other__info-image {
+    width: 24px;
+    height: 24px;
+}
+
+.temp::after,
+.other__feel::after {
+    content: '°';
+}
+
+.other__feel::before {
+    content: 'Ощущается как ';
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+    .main {
+        height: 552px;
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 184px 304px;
+        padding-block: 16px;
+        gap: 32px;
+        justify-content: center;
+    }
+    .main__weather {
+        height: 184px;
+        padding-block: 0;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .today {
+        height: 60px;
+    }
+    .temp {
+        height: 56px;
+        font-size: 56px;
+        line-height: 56px;
+    }
+    .other {
+        height: 36px;
+    }
+    .other__info-image {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .main {
+        height: 806px;
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 306px 404px;
+        padding-block: 24px;
+        gap: 48px;
+        justify-content: center;
+    }
+    .main__weather {
+        height: 306px;
+        padding: 0;
+    }
+    .today {
+        height: 92px;
+    }
+    .other {
+        height: 54px;
+    }
+}

@@ -1,0 +1,153 @@
+.main__group {
+    height: 408px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.card,
+.card__values,
+.card__bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card {
+    width: 158px;
+    height: 196px;
+    padding: 16px;
+    background: var(--element-background);
+    border-radius: var(--radius);
+    color: var(--accent-color);
+}
+
+.card__values {
+    height: 116px;
+    font-size: 32px;
+    line-height: 32px;
+}
+
+.card__bar {
+    height: 32px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.card__bar-values {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+#humidity-progress,
+#visibility-progress,
+#pressure-progress {
+    appearance: none;
+    outline: none;
+    width: 100%;
+    height: 8px;
+    background: rgba(218, 218, 218, 0.4);
+    border-radius: 16px;
+    margin: 0px;
+}
+
+#pressure-progress {
+    background: radial-gradient(50% 9453.13% at 50% 50%, 
+    rgba(84, 84, 84, 0.4) 0%, 
+    rgba(138, 138, 138, 0.4) 45.12%, 
+    #DADADA 100%, 
+    rgba(218, 218, 218, 0.4) 100%);
+}
+
+.card__bar-progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 8px;
+    height: 8px;
+    background-color: var(--text-color);
+    border-radius: 50%;
+}
+
+.card__bar-progress::-moz-range-thumb {
+    -moz-appearance: none;
+    appearance: none;
+    width: 8px;
+    height: 8px;
+    background-color: var(--text-color);
+    border-radius: 50%;
+}
+
+#humidity::after {
+    content: ' %';
+}
+
+#visibility::after {
+    content: ' км';
+}
+
+#wind::after {
+    content: ' м/с';
+}
+
+
+
+@media (min-width: 375px) and (max-width: 767px) {
+    .main__group {
+        width: 311px;
+        height: 304px;
+        gap: 8px;
+        justify-content: center;
+    }
+    .card {
+        width: 98.33px;
+        height: 148px;
+        padding: 12px;
+    }
+    .card__values-icon {
+        width: 24px;
+        height: 24px;
+    }
+    .card__values {
+        height: 86px;
+        font-size: 22px;
+        line-height: 22px;
+    }
+    .card__bar {
+        height: 24px;
+        font-size: 10px;
+        line-height: 12px;
+    }  
+    #humidity-progress,
+    #visibility-progress,
+    #pressure-progress {
+        height: 6px;
+    }
+    .card__bar-progress::-webkit-slider-thumb {
+        width: 6px;
+        height: 6px;
+    }
+    .card__bar-progress::-moz-range-thumb {
+        width: 6px;
+        height: 6px;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+    .main__group {
+        width: 400px;
+    }
+    .card {
+        width: 128px;
+
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .main__group {
+        width: 506px;
+        height: 408px;
+        gap: 12px;
+        justify-content: center;
+    }
+}
