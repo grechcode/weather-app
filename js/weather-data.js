@@ -28,12 +28,18 @@ input.addEventListener('input', () => {
         .then(response => {
             if (response.ok) {
                 input.style.cssText = "letter-spacing: inherit; opacity: 1;"
+                resetButton.style.display = "none"
+                submitButton.style.display = "block"
             } else {
-                input.style.cssText = "letter-spacing: 1.5px; opacity: 0.5;"
+                input.style.cssText = "letter-spacing: 0.1em; opacity: 0.5;"
+                resetButton.style.display = "block"
+                submitButton.style.display = "none"
             }
         })
     } else {
         input.style.cssText = "letter-spacing: inherit;"
+        resetButton.style.display = "none"
+        submitButton.style.display = "block"
     }
 })
 
