@@ -25,12 +25,13 @@ tabs.forEach(gallery => {
     
     // Слушаем кнопки
     previousButton.addEventListener('click', () => {
-        gallery.scrollBy({ left: -1, behavior: 'smooth'})
+        gallery.scrollBy({ left: -70, behavior: 'smooth'})
     })
     nextButton.addEventListener('click', () => {
-        gallery.scrollBy({ left: 1, behavior: 'smooth'})
+        gallery.scrollBy({ left: 70, behavior: 'smooth'})
     })
 })
+
 
 
 
