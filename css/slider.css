@@ -162,14 +162,14 @@
 }
 
 @media (hover: none) {
-    label[for="hours"]:hover ~ .hours-underline {
+    label[for="hours"]:active ~ .hours-underline {
         opacity: 1;
     }
-    label[for="days"]:hover ~ .days-underline {
+    label[for="days"]:active ~ .days-underline {
         opacity: 1;
     }
-    .previous-button:enabled:hover,
-    .next-button:enabled:hover {
+    .previous-button:enabled:active,
+    .next-button:enabled:active {
         background: var(--active-element-background);
     }
 }
