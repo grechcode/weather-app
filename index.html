@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale-1.0, user-scalable=0">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/index.css">
+    <title>WeatherApp</title>
+</head>
+<body>
+    <img class="content-load" src="./public/mobile-logo.svg" alt="loading">
+    <div class="content">
+        <header class="header">
+            <a href="?" title="Местная погода" class="header__logo">
+                <img src="public/desktop-logo.svg" alt="logo" id="desktop-logo" loading="lazy">
+                <img src="public/mobile-logo.svg" alt="logo" id="mobile-logo" loading="lazy">
+            </a>
+            <form method="get" class="header__form">
+                <input name="city" id="city" class="header__form-input" spellcheck="false" autocomplete="off" placeholder="Поиск по городу" required>
+                <button type="submit" class="header__form-button" title="Поиск">
+                    <img src="public/icons/search.svg" alt="search" loading="lazy">
+                </button>
+                <button type="reset" class="header__form-button" title="Сброс">
+                    <img src="public/icons/close.svg" alt="close" loading="lazy">
+                </button>
+            </form>
+        </header>
+        <main class="main">
+            <section class="main__weather">
+                <div class="today">
+                    <h3 class="today__location" id="loc"></h3>
+                    <time class="today__day"></time>
+                    <time class="today__time"></time>
+                </div>
+                <p class="temp" id="temperature"></p>
+                <div class="other">
+                    <figure class="other__info">
+                        <img src="" alt="" class="other__info-image" id="weather-text-image" loading="lazy">
+                        <figcaption id="weather-text"></figcaption>
+                    </figure>
+                    <p class="other__feel" id="feel-temp"></p>
+                </div>
+            </section>
+            <section class="main__group"></section>
+        </main>
+        <section class="slider">
+            <div class="slider__menu">
+                <h3 class="slider__menu-title">Прогноз:</h3>
+                <div class="slider__menu-button">
+                    <input type="radio" id="hours" name="menu" value="hours" checked>
+                    <label for="hours">на 24 часа</label>
+                    <div class="hours-underline"></div>
+                </div>
+                <div class="slider__menu-button">
+                    <input type="radio" id="days" name="menu" value="days">
+                    <label for="days">на 5 дней</label>
+                    <div class="days-underline"></div>
+                </div>
+            </div>
+            <div class="slider__carousel">
+                <div class="slider__carousel-hours">
+                    <button class="previous-button" disabled>
+                        <img src="./public/icons/chevron.svg" alt="previous">
+                    </button>
+                    <ul id="hours-gallery" class="gallery"></ul>
+                    <button class="next-button">
+                        <img src="./public/icons/chevron.svg" alt="next" width="24px">
+                    </button>
+                </div>
+                <div class="slider__carousel-daily">
+                    <button class="previous-button" disabled>
+                        <img src="./public/icons/chevron.svg" alt="previous">
+                    </button>
+                    <ul id="daily-gallery" class="gallery"></ul>
+                    <button class="next-button">
+                        <img src="./public/icons/chevron.svg" alt="next" width="24px">
+                    </button>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <p>Проект выполнен в рамках стажировки <a href="https://preax.ru" target="_blank">PREAX</a></p>
+        </footer>
+    </div>
+    <script src="./js/index.js" type="module"></script>
+</body>
+</html>
