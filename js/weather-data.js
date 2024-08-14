@@ -1,6 +1,6 @@
 import { getTime, getDay } from "./vars&funcs.js";
 
-const appID = "70e1ed322b02acbc57d443dd91065f3e"
+const appID = "3aba6475ce39110890ad01f7a40dbaa0"
 const input = document.querySelector('#city')
 const resetButton = document.querySelector("#reset-button")
 const submitButton = document.querySelector("#submit-button")
