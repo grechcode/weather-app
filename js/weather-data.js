@@ -2,6 +2,8 @@ import { getTime, getDay } from "./vars&funcs.js";
 
 const appID = "70e1ed322b02acbc57d443dd91065f3e"
 const input = document.querySelector('#city')
+const resetButton = document.querySelector("#reset-button")
+const submitButton = document.querySelector("#submit-button")
 let params = new URLSearchParams(window.location.search)
 let city = params.get('city')
 let latitude = params.get('latitude')
