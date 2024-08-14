@@ -40,6 +40,7 @@
 
 .header__form-input::placeholder {
     text-transform: none;
+    letter-spacing: 0px;
 }
 
 .header__form:hover,
@@ -47,21 +48,8 @@
     background: var(--active-element-background);
 }
 
-.header__form-button[type='reset'] {
-    transition: var(--transition);
-    display: none;
-}
-
 .header__form-button[type='reset']:hover {
     filter: contrast(200%);
-}
-
-.header__form-input:valid ~ .header__form-button[type='reset'] {
-    display: block;
-}
-
-.header__form-input:valid ~ .header__form-button[type='submit'] {
-    display: none;
 }
 
 @media (min-width: 320px) and (max-width: 1023px) {
