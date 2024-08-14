@@ -12,7 +12,7 @@ let clientTimeZone = (Math.abs(new Date().getTimezoneOffset()) * 60 * 1000)
 document.addEventListener("submit", submit => {
     submit.preventDefault()
     let value = input.value.trim()
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${value}&lang=ru&units=metric&appid=${appID}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${value}&lang=ru&units=metric&appid=${appID}`)
     .then(response => {
         if (response.ok) {
             window.location.search = `?city=${value}`
@@ -24,7 +24,7 @@ document.addEventListener("submit", submit => {
 input.addEventListener('input', () => {
     let value = input.value.trim()
     if (value.length >= 3) {
-        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${value}&lang=ru&units=metric&appid=${appID}`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${value}&lang=ru&units=metric&appid=${appID}`)
         .then(response => {
             if (response.ok) {
                 input.style.cssText = "letter-spacing: inherit; opacity: 1;"
@@ -44,16 +44,16 @@ const geolocationError = () => window.location.search = `?city=Москва`
 // Генерируем нужную ссылку
 const weatherUrl = (city) => {
     return (city 
-        ? `http://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${appID}` 
-        : `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=ru&units=metric&appid=${appID}`
+        ? `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${appID}` 
+        : `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=ru&units=metric&appid=${appID}`
     )
 }
 
 // Генерируем нужную ссылку
 const forecastUrl = (city) => {
     return (city 
-        ? `http://api.openweathermap.org/data/2.5/forecast?q=${city}&lang=ru&units=metric&appid=${appID}` 
-        : `http://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&lang=ru&units=metric&appid=${appID}`
+        ? `https://api.openweathermap.org/data/2.5/forecast?q=${city}&lang=ru&units=metric&appid=${appID}` 
+        : `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&lang=ru&units=metric&appid=${appID}`
     )
 }
 

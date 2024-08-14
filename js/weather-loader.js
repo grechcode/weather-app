@@ -81,7 +81,7 @@ const dataLoader = (mainWeather) => {
         try {
             document.querySelector(`#${param}`).textContent = capitalize(mainWeather[param])
         } catch (error) {
-            document.querySelector(`#weather-text-image`).src = `../public/icons/weather-text/${mainWeather[param]}.svg`
+            document.querySelector(`#weather-text-image`).src = `./public/icons/weather-text/${mainWeather[param]}.svg`
             document.querySelector(`#weather-text-image`).alt = mainWeather["weather-text"]
         }
     })
@@ -161,7 +161,7 @@ const sliderLoader = (forecastWeather) => {
             : "night"
         let inner = `<li class="gallery__card">
                         <time datetime="${hour}" class="gallery__card-time">${hour}</time>
-                        <img src="../public/icons/weather-text/${element['icon']}.svg" alt="${element['weather-text']}" title="${element['weather-text']}" class="gallery__card-image" loading="lazy">
+                        <img src="./public/icons/weather-text/${element['icon']}.svg" alt="${element['weather-text']}" title="${element['weather-text']}" class="gallery__card-image" loading="lazy">
                         <p class="gallery__card-temp">${element['temperature']}</p>
                     </li>`
         hoursGallery.querySelector('ul').insertAdjacentHTML('beforeend', inner)
@@ -172,7 +172,7 @@ const sliderLoader = (forecastWeather) => {
         let element = dailyWeather[day]
         let inner = `<li class="gallery__card">
                         <time class="gallery__card-time">${day}</time>
-                        <img src="../public/icons/weather-text/${element['icon']}.svg" alt="${element['weather-text']}" title="${element['weather-text']}" class="gallery__card-image" loading="lazy">
+                        <img src="./public/icons/weather-text/${element['icon']}.svg" alt="${element['weather-text']}" title="${element['weather-text']}" class="gallery__card-image" loading="lazy">
                         <div class="gallery__card-temp">
                             <p>${element['temperature'][0]}</p><p>${element['temperature'][1]}</p>
                         </div>
