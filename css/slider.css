@@ -39,14 +39,6 @@
     border-radius: 1px;
 }
 
-label[for="hours"]:hover ~ .hours-underline {
-    opacity: 1;
-}
-
-label[for="days"]:hover ~ .days-underline {
-    opacity: 1;
-}
-
 #hours:checked ~ label[for="hours"] {
     color: var(--text-color);
     cursor: default;
@@ -87,11 +79,6 @@ label[for="days"]:hover ~ .days-underline {
 .previous-button:disabled,
 .next-button:disabled {
     opacity: 50%;
-}
-
-.previous-button:enabled:hover,
-.next-button:enabled:hover {
-    background: var(--active-element-background);
 }
 
 .next-button {
@@ -159,6 +146,32 @@ label[for="days"]:hover ~ .days-underline {
 
 .gallery__card-temp p:last-child::before {
     content: ' до ';
+}
+
+@media (hover: hover) {
+    label[for="hours"]:hover ~ .hours-underline {
+        opacity: 1;
+    }
+    label[for="days"]:hover ~ .days-underline {
+        opacity: 1;
+    }
+    .previous-button:enabled:hover,
+    .next-button:enabled:hover {
+        background: var(--active-element-background);
+    }
+}
+
+@media (hover: none) {
+    label[for="hours"]:hover ~ .hours-underline {
+        opacity: 1;
+    }
+    label[for="days"]:hover ~ .days-underline {
+        opacity: 1;
+    }
+    .previous-button:enabled:hover,
+    .next-button:enabled:hover {
+        background: var(--active-element-background);
+    }
 }
 
 @media (min-width: 375px) and (max-width: 767px) {

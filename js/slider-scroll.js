@@ -11,10 +11,10 @@ tabs.forEach(gallery => {
         let calc = gallery.scrollLeft + gallery.clientWidth
 
         // Активируем/дезактивируем кнопки
-        if (Math.round(calc) === Math.round(gallery.clientWidth)) {
+        if (Math.round(calc) <= Math.round(gallery.clientWidth)) {
             previousButton.disabled = true
             nextButton.disabled = false
-        } else if (Math.round(calc) === Math.round(gallery.scrollWidth)) {
+        } else if (Math.round(calc) >= Math.round(gallery.scrollWidth)) {
             previousButton.disabled = false
             nextButton.disabled = true
         } else if (Math.round(gallery.clientWidth) < Math.round(calc) < Math.round(gallery.scrollWidth)) {
