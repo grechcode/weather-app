@@ -88,7 +88,7 @@ export let cardsWeather = {
         "max" : 800
     },
     "visibility" : {
-        "value": mainWeatherData.visibility / 1000,
+        "value": (mainWeatherData.visibility / 1000).toFixed(1),
         "min" : 0.1,
         "max" : 10
     },
