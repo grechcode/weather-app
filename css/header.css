@@ -58,6 +58,26 @@
     text-transform: capitalize;
 }
 
+.header__form-input::-webkit-input-placeholder {
+    text-transform: none;
+    letter-spacing: 0px;
+}
+
+.header__form-input::-moz-placeholder {
+    text-transform: none;
+    letter-spacing: 0px;
+}
+
+.header__form-input:-ms-input-placeholder {
+    text-transform: none;
+    letter-spacing: 0px;
+}
+
+.header__form-input::-ms-input-placeholder {
+    text-transform: none;
+    letter-spacing: 0px;
+}
+
 .header__form-input::placeholder {
     text-transform: none;
     letter-spacing: 0px;
