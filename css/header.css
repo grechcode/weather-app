@@ -1,3 +1,22 @@
+@keyframes uncorrect {
+    0% {
+        transform: translate(1%, 0);
+        text-decoration: underline dotted red;
+    }
+    25% {
+        transform: translate(-1%, 0);
+    }
+    50% {
+        transform: translate(1%, 0);
+    }
+    75% {
+        transform: translate(-1%, 0);
+    }
+    100% {
+        transform: translate(0px, 0);
+    }
+}
+
 .header {
     height: 112px;
     font-size: 20px;
@@ -50,6 +69,24 @@
 
 .header__form-button[type='reset']:hover {
     filter: contrast(200%);
+}
+
+.header__form-button[type='reset'] {
+    display: none;
+}
+
+.header__form-button[type='reset']:hover,
+.header__form-button[type='submit']:hover {
+    transition: var(--transition);
+    filter: contrast(200%);
+}
+
+.header__form-input:valid ~ .header__form-button[type='reset'] {
+    display: block;
+}
+
+.header__form-input:valid ~ .header__form-button[type='submit'] {
+    display: none;
 }
 
 @media (min-width: 320px) and (max-width: 1023px) {
