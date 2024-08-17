@@ -4,6 +4,7 @@
     gap: 16px;
     flex-wrap: wrap;
 }
+
 .card,
 .card__values,
 .card__bar {
