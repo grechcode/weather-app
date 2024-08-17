@@ -2,6 +2,7 @@
     0% {
         transform: translate(1%, 0);
         text-decoration: underline dotted red;
+        -webkit-text-decoration: underline dotted red;
     }
     25% {
         transform: translate(-1%, 0);
