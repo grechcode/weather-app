@@ -13,7 +13,7 @@ let clientTimeZone = (Math.abs(new Date().getTimezoneOffset()) * 60 * 1000)
 form.addEventListener("submit", submit => {
     submit.preventDefault()
     let value = input.value.trim()
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${value}&lang=ru&units=metric&appid=${appID}`)
+    fetch(`https://ru.api.openweathermap.org/data/2.5/weather?q=${value}&lang=ru&units=metric&appid=${appID}`)
     .then(response => {
         if (response.ok) {
             form.submit()
@@ -33,8 +33,8 @@ if (!window.location.search) {
 
 async function getWeatherData() {
     let location = (city 
-        ? `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${appID}` 
-        : `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=ru&units=metric&appid=${appID}`
+        ? `https://ru.api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${appID}` 
+        : `https://ru.api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=ru&units=metric&appid=${appID}`
     )
     let response = await fetch(location)
     let weatherData = await response.json()
@@ -43,8 +43,8 @@ async function getWeatherData() {
 
 async function getForecastData() {
     let location = (city 
-        ? `https://api.openweathermap.org/data/2.5/forecast?q=${city}&lang=ru&units=metric&appid=${appID}` 
-        : `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&lang=ru&units=metric&appid=${appID}`
+        ? `https://ru.api.openweathermap.org/data/2.5/forecast?q=${city}&lang=ru&units=metric&appid=${appID}` 
+        : `https://ru.api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&lang=ru&units=metric&appid=${appID}`
     )
     let response = await fetch(location)
     let forecstData = await response.json()
