@@ -33,7 +33,7 @@ if (!window.location.search) {
 
 async function getWeatherData() {
     let location = (city 
-        ? `https://ru.api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${appID}` 
+        ? `https://ru.api.openweathermap.org/data/2.5/weather?q=${city.trim()}&lang=ru&units=metric&appid=${appID}` 
         : `https://ru.api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=ru&units=metric&appid=${appID}`
     )
     let response = await fetch(location)
@@ -43,7 +43,7 @@ async function getWeatherData() {
 
 async function getForecastData() {
     let location = (city 
-        ? `https://ru.api.openweathermap.org/data/2.5/forecast?q=${city}&lang=ru&units=metric&appid=${appID}` 
+        ? `https://ru.api.openweathermap.org/data/2.5/forecast?q=${city.trim()}&lang=ru&units=metric&appid=${appID}` 
         : `https://ru.api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&lang=ru&units=metric&appid=${appID}`
     )
     let response = await fetch(location)
