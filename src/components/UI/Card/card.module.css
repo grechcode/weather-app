@@ -1,0 +1,133 @@
+.card {
+  display: flex;
+  row-gap: var(--indent-m);
+  flex-direction: column;
+  align-items: center;
+  transition-duration: var(--transition);
+  transition-property: background-color;
+  border-radius: var(--border-radius);
+  background-color: var(--tone-100);
+  padding: var(--indent-m);
+  max-width: 100%;
+  height: 100%;
+  min-height: max-content;
+}
+
+.title {
+  transition-duration: var(--transition);
+  transition-property: color;
+  color: var(--filled-900);
+  font: var(--heading-h3);
+}
+
+.icon {
+  transition-duration: var(--transition);
+  transition-property: opacity, filter;
+  width: 32px;
+  height: 32px;
+}
+
+[data-theme='dark'] .icon {
+  opacity: 0.7;
+  filter: invert(1);
+}
+
+.data {
+  transition-duration: var(--transition);
+  transition-property: color;
+  color: var(--filled-900);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+}
+
+.description {
+  transition-duration: var(--transition);
+  transition-property: color;
+  color: var(--filled-800);
+  font: var(--body-xs);
+  text-align: center;
+}
+
+.barWrapper {
+  display: flex;
+  row-gap: var(--indent-xs);
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.descriptionBarVal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.daySkeleton,
+.iconSkeleton,
+.valueSkeleton,
+.barSkeleton {
+  height: 32px;
+}
+
+.titleSkeleton {
+  width: 72px;
+  height: 20px;
+}
+
+.iconSkeleton {
+  width: 32px;
+}
+
+.valueSkeleton {
+  width: 56px;
+}
+
+.barSkeleton {
+  width: 108px;
+}
+
+@media all and (max-width: 767px) {
+  .card {
+    row-gap: var(--indent-s);
+    padding: var(--indent-s);
+  }
+
+  .title {
+    font: var(--mobile-heading-h2);
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .data {
+    font-size: 22px;
+  }
+
+  .description {
+    font: var(--mobile-body-sm);
+  }
+
+  .titleSkeleton {
+    width: 56px;
+    height: 16px;
+  }
+
+  .iconSkeleton {
+    width: 24px;
+    height: 24px;
+  }
+
+  .valueSkeleton {
+    width: 48px;
+    height: 22px;
+  }
+
+  .barSkeleton {
+    width: 72px;
+    height: 26px;
+  }
+}

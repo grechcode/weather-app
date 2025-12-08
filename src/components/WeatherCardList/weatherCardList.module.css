@@ -1,0 +1,22 @@
+.list {
+  display: flex;
+  row-gap: var(--indent-s);
+  flex-direction: column;
+  padding-inline: var(--indent-m);
+  width: inherit;
+}
+
+.emptyMessage {
+  transition-duration: var(--transition);
+  transition-property: color;
+  padding-inline: var(--indent-m);
+  color: var(--filled-700);
+}
+
+@media (max-width: 767px) {
+  .list,
+  .emptyMessage {
+    row-gap: var(--indent-xs);
+    padding-inline: var(--indent-s);
+  }
+}

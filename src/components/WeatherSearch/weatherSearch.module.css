@@ -1,0 +1,10 @@
+.form {
+  flex-grow: 1;
+}
+.search {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: var(--indent-m);
+  z-index: 5;
+}

@@ -1,0 +1,15 @@
+.contentWrapper {
+  padding-inline: var(--indent-m);
+}
+
+.buttonBlock {
+  display: flex;
+  column-gap: var(--indent-m);
+  margin-inline: auto;
+}
+
+@media (max-width: 767px) {
+  .contentWrapper {
+    padding-inline: var(--indent-s);
+  }
+}

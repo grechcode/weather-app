@@ -1,0 +1,13 @@
+.list {
+  width: inherit;
+}
+
+.contentWrapper {
+  padding-inline: var(--indent-m);
+}
+
+@media (max-width: 767px) {
+  .contentWrapper {
+    padding-inline: var(--indent-s);
+  }
+}

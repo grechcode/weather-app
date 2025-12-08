@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  transition-duration: var(--transition);
+  transition-property: color;
+  padding-block: var(--indent-xl);
+  color: var(--filled-0);
+  font: var(--body-md);
+}
+
+.footerLink {
+  color: inherit;
+  text-decoration: underline;
+}
+
+@media all and (max-width: 1023px) {
+  .footer {
+    padding-block: var(--indent-l);
+  }
+}
+
+@media all and (max-width: 767px) {
+  .footer {
+    padding-block: var(--indent-m);
+    font: var(--mobile-body-md);
+  }
+}

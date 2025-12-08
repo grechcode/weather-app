@@ -1,0 +1,50 @@
+.tabBtn {
+  position: relative;
+  transition-duration: var(--transition);
+  transition-property: color, text-decoration;
+  border: none;
+  padding-bottom: 3px;
+  color: var(--filled-400);
+  font: var(--heading-h3);
+  user-select: none;
+  white-space: nowrap;
+
+  &.active {
+    pointer-events: none;
+    color: var(--filled-0);
+  }
+}
+
+.tabBtn::before {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  transition-duration: var(--transition);
+  transition-property: width, background-color;
+  border-radius: 1px;
+  background-color: currentColor;
+  width: 0%;
+  height: 2px;
+  content: '';
+}
+
+.tabBtn.active::before {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .tabBtn {
+    font: var(--mobile-heading-h2);
+  }
+
+  .tabBtn::before {
+    border-radius: 0.5px;
+    height: 1px;
+  }
+}
+
+@media (hover: hover) {
+  .tabBtn:hover::before {
+    width: 100%;
+  }
+}

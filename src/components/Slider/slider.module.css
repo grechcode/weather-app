@@ -1,0 +1,64 @@
+.forecast {
+  grid-column: 2 span;
+  padding-block: var(--indent-xl);
+}
+
+.forecastHeader {
+  display: flex;
+  align-items: end;
+  gap: var(--indent-xl);
+  margin-bottom: 32px;
+}
+
+.forecastTitle {
+  color: var(--filled-0);
+  font: var(--heading-h2);
+}
+
+.errorWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+}
+
+@media (max-width: 1023px) {
+  .forecast {
+    grid-column: 1 span;
+    padding-block: var(--indent-l);
+  }
+
+  .forecastHeader {
+    gap: var(--indent-l);
+    margin-bottom: 24px;
+  }
+
+  .errorWrapper {
+    height: 136px;
+  }
+}
+
+@media (max-width: 767px) {
+  .forecast {
+    padding-block: var(--indent-m);
+  }
+
+  .forecastHeader {
+    gap: var(--indent-m);
+    margin-bottom: 16px;
+  }
+
+  .forecastTitle {
+    font: var(--mobile-heading-h1);
+  }
+
+  .errorWrapper {
+    height: 46px;
+  }
+}
+
+@media (max-width: 639px) {
+  .errorWrapper {
+    height: 104px;
+  }
+}

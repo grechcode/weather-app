@@ -1,0 +1,214 @@
+.daySkeleton,
+.timeSkeleton,
+.weatherSkeleton,
+.feelingSkeleton {
+  height: 24px;
+}
+
+.daySkeleton,
+.titleSkeleton,
+.weatherSkeleton {
+  margin-bottom: 8px;
+}
+
+.degreeSkeleton {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.titleSkeleton {
+  width: 160px;
+  height: 32px;
+}
+
+.daySkeleton {
+  width: 96px;
+}
+
+.timeSkeleton {
+  width: 48px;
+}
+
+.degreeSkeleton {
+  width: 112px;
+  height: 112px;
+}
+
+.weatherSkeleton {
+  width: 104px;
+}
+
+.feelingSkeleton {
+  width: 64px;
+}
+
+.cityCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: var(--indent-xs);
+  height: 100%;
+  text-align: center;
+}
+
+.title {
+  width: 90%;
+  font: var(--heading-h2);
+}
+
+.degree {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-weight: 700;
+  font-size: 112px;
+  line-height: 100%;
+}
+
+.weather,
+.feeling,
+.day,
+.time,
+.degree,
+.title,
+.degree {
+  transition-duration: var(--transition);
+  transition-property: color;
+  color: var(--filled-0);
+}
+
+.weather,
+.feeling,
+.day,
+.time {
+  font: var(--body-lg);
+}
+
+.day,
+.title,
+.weather {
+  margin-bottom: 8px;
+}
+
+.weather {
+  display: flex;
+  align-items: center;
+  gap: var(--indent-xs);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.day::first-letter {
+  text-transform: uppercase;
+}
+
+.description::first-letter {
+  text-transform: uppercase;
+}
+
+@media all and (max-width: 1023px) {
+  .daySkeleton,
+  .titleSkeleton,
+  .weatherSkeleton {
+    margin-bottom: 6px;
+  }
+
+  .timeSkeleton {
+    margin-bottom: 24px;
+  }
+
+  .degreeSkeleton {
+    margin-bottom: 24px;
+  }
+
+  .cityCard {
+    padding: 0;
+  }
+
+  .title,
+  .day,
+  .weather {
+    margin-bottom: 6px;
+  }
+
+  .time {
+    margin-bottom: 24px;
+  }
+
+  .degreeCurrent {
+    transform: translateY(0);
+  }
+
+  .degree {
+    margin-bottom: 24px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .daySkeleton,
+  .timeSkeleton,
+  .weatherSkeleton,
+  .feelingSkeleton {
+    height: 16px;
+  }
+
+  .titleSkeleton {
+    margin-bottom: 4px;
+    width: 72px;
+    height: 20px;
+  }
+
+  .daySkeleton,
+  .weatherSkeleton {
+    margin-bottom: 4px;
+    width: 56px;
+  }
+
+  .timeSkeleton,
+  .feelingSkeleton {
+    width: 32px;
+  }
+
+  .degreeSkeleton {
+    width: 56px;
+    height: 56px;
+  }
+
+  .timeSkeleton,
+  .degreeSkeleton {
+    margin-bottom: 16px;
+  }
+
+  .title {
+    margin-bottom: 4px;
+    font: var(--mobile-heading-h1);
+  }
+
+  .day,
+  .weather {
+    margin-bottom: 4px;
+  }
+
+  .degree {
+    font-size: 56px;
+  }
+
+  .time,
+  .degree {
+    margin-bottom: 16px;
+  }
+
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .weather,
+  .feeling,
+  .day,
+  .time {
+    font: var(--mobile-body-lg);
+  }
+}

@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-variant-numeric: lining-nums !important;
+}
+
+html,
+body {
+  scrollbar-gutter: stable;
+}
+
+body {
+  min-width: 375px;
+  scrollbar-color: var(--filled-700);
+  scrollbar-width: 4px;
+  font-style: normal;
+  font-family: 'Raleway', sans-serif;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: var(--border-radius);
+    background-color: var(--filled-700);
+  }
+}
+
+body:has(div[data='dropdown']) {
+  overflow-y: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus-visible,
+ul:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--filled-0);
+  outline-offset: 4px;
+  border-radius: var(--border-radius);
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+}
+
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  display: none;
+}
+
+svg * {
+  transition-duration: var(--transition);
+  transition-property: fill, stroke;
+}
+
+/**
+   Удаляем все анимации и переходы для людей,
+   которые предпочитают их не использовать
+  */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

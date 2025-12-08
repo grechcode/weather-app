@@ -1,0 +1,37 @@
+.button {
+  transition-duration: var(--transition);
+  transition-property: background-color;
+  fill: none;
+  stroke: var(--filled-700);
+  box-shadow: var(--light-shadow-200);
+  border-radius: var(--border-radius);
+  background-color: var(--tone-500);
+  min-width: 56px;
+  height: 48px;
+}
+
+.icon {
+  transition-duration: var(--transition);
+  transition-property: stroke;
+  stroke: inherit;
+  width: 24px;
+  height: 24px;
+}
+
+@media all and (max-width: 767px) {
+  .button {
+    min-width: 40px;
+    height: 32px;
+  }
+
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (hover: hover) {
+  .button:hover {
+    background-color: var(--filled-200);
+  }
+}

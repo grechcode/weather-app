@@ -1,0 +1,27 @@
+.section {
+  display: flex;
+  row-gap: var(--indent-s);
+  flex-direction: column;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition-duration: var(--transition);
+  transition-property: color;
+  padding-inline: var(--indent-m);
+  color: var(--filled-900);
+  font: var(--heading-h2);
+}
+
+@media (max-width: 767px) {
+  .section {
+    row-gap: var(--indent-xs);
+  }
+  .header {
+    padding-inline: var(--indent-s);
+    font: var(--mobile-heading-h1);
+  }
+}

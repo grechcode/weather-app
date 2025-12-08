@@ -1,0 +1,63 @@
+.block {
+  --progress: 0;
+  --size: 8px;
+  position: relative;
+  width: 100%;
+  height: var(--size);
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  left: calc(var(--progress));
+  z-index: 10;
+  transition-duration: var(--transition);
+  transition-property: background-color;
+  border-radius: 100%;
+  background-color: var(--filled-100);
+  width: var(--size);
+  height: var(--size);
+}
+
+.line {
+  --offset: 4px;
+  --offset-sm: 6px;
+  z-index: 1;
+  -webkit-mask: radial-gradient(
+    circle at calc(var(--progress) + var(--offset)),
+    transparent var(--offset-sm),
+    black var(--offset-sm),
+    black var(--offset-sm)
+  );
+  mask: radial-gradient(
+    circle at calc(var(--progress) + var(--offset)),
+    transparent var(--offset-sm),
+    black var(--offset-sm),
+    black var(--offset-sm)
+  );
+  border-radius: var(--border-radius);
+  height: var(--size);
+}
+
+.normal {
+  transition-duration: var(--transition);
+  transition-property: background-color;
+  background-color: var(--tone-200);
+}
+
+.gradient {
+  opacity: 0.4;
+  transition-duration: var(--transition);
+  transition-property: background-image;
+  background-image: var(--gradient-100);
+}
+
+@media all and (max-width: 767px) {
+  .block {
+    --size: 6px;
+  }
+  .line {
+    --offset: 3px;
+    --offset-sm: 5px;
+  }
+}

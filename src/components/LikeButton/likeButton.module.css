@@ -1,0 +1,65 @@
+.favoriteButton {
+  backdrop-filter: blur(50px);
+  transition-duration: var(--transition);
+  transition-property: opacity, background-color;
+  fill: none;
+  stroke: var(--filled-0);
+  border-radius: var(--border-radius);
+  background-color: var(--tone-500);
+  width: 56px;
+
+  &:focus-visible {
+    stroke: var(--tone-600);
+    outline: none;
+    border: none;
+    background-color: var(--tone-200);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    stroke: var(--tone-600);
+    pointer-events: none;
+  }
+}
+
+.favorite {
+  fill: var(--filled-0);
+  stroke: var(--filled-0);
+
+  &:focus-visible {
+    fill: var(--filled-700);
+    stroke: var(--filled-700);
+    background-color: var(--tone-200);
+  }
+}
+
+.heartIcon {
+  fill: inherit;
+  stroke: inherit;
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 767px) {
+  .favoriteButton {
+    width: 40px;
+  }
+
+  .heartIcon {
+    fill: inherit;
+    stroke: inherit;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (hover: hover) {
+  .favoriteButton:hover {
+    stroke: var(--tone-600);
+  }
+
+  .favorite:hover {
+    fill: var(--filled-700);
+    stroke: var(--filled-700);
+  }
+}

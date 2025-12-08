@@ -1,0 +1,86 @@
+.button {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  transition-duration: var(--transition);
+  transition-property: background-color, margin, width, opacity;
+  border-radius: var(--border-radius);
+  background-color: var(--tone-100);
+  width: 104px;
+  height: 48px;
+  overflow: hidden;
+
+  &.hide {
+    opacity: 0;
+    width: 0;
+  }
+
+  &:focus-visible {
+    background-color: var(--tone-700);
+  }
+}
+
+.slider {
+  position: absolute;
+  left: 0;
+  backdrop-filter: blur(30px);
+  transition-duration: var(--transition);
+  transition-property: background-color, translate, scale;
+  box-shadow: var(--shadow-100);
+  border-radius: var(--border-radius);
+  background-color: var(--primary-400);
+  width: 56px;
+  height: 100%;
+}
+
+.sliderActive {
+  translate: 48px;
+}
+
+.icon {
+  z-index: 50;
+  transition-duration: var(--transition);
+  transition-property: width, height;
+  fill: var(--filled-700);
+  width: 24px;
+  height: 24px;
+}
+
+.iconActive {
+  fill: var(--filled-900);
+  width: 32px;
+  height: 32px;
+}
+
+@media (max-width: 767px) {
+  .button {
+    width: 72px;
+    height: 32px;
+  }
+
+  .slider {
+    width: 40px;
+    height: 32px;
+  }
+
+  .sliderActive {
+    translate: 32px;
+  }
+
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .iconActive {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (hover: hover) {
+  .button:hover {
+    background-color: var(--tone-700);
+  }
+}

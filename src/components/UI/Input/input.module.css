@@ -1,0 +1,116 @@
+.inputWrapper {
+  display: flex;
+  position: relative;
+  column-gap: var(--indent-m);
+  align-items: center;
+  transition-duration: var(--transition);
+  transition-property: background-color;
+  border-radius: var(--border-radius);
+  background-color: var(--tone-100);
+  padding-left: 16px;
+  height: 48px;
+
+  &:focus-within {
+    background-color: var(--filled-200);
+  }
+
+  &:not(:has(.input:placeholder-shown)) {
+    .searchButton {
+      display: none;
+    }
+
+    .clearButton {
+      display: flex;
+    }
+  }
+}
+
+.input {
+  flex-grow: 1;
+  transition-duration: var(--transition);
+  transition-property: opacity, color;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding-block: var(--indent-s);
+  width: 50px;
+  height: 100%;
+  overflow-x: hidden;
+  color: var(--filled-900);
+  font: var(--body-lg);
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.input::placeholder {
+  transition-duration: var(--transition);
+  transition-property: color;
+  color: var(--filled-600);
+  font: var(--body-lg);
+  text-transform: none;
+}
+
+.input:disabled {
+  opacity: 0.6;
+}
+
+.searchButton,
+.clearButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--filled-700);
+  stroke: var(--filled-700);
+  width: 24px;
+  height: 24px;
+
+  &:focus-within {
+    fill: var(--filled-900);
+    stroke: var(--filled-900);
+  }
+}
+
+.clearButton {
+  display: none;
+}
+
+.icon {
+  transition-duration: var(--transition);
+  transition-property: fill, stroke;
+  fill: inherit;
+  stroke: inherit;
+  width: inherit;
+  height: inherit;
+}
+
+@media all and (max-width: 767px) {
+  .inputWrapper {
+    column-gap: var(--indent-s);
+    padding-left: 12px;
+    height: 32px;
+  }
+
+  .input,
+  .input::placeholder {
+    font: var(--mobile-body-lg);
+  }
+
+  .icon {
+    right: 14px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (hover: hover) {
+  .inputWrapper:hover {
+    background-color: var(--filled-200);
+  }
+
+  .searchButton:hover,
+  .clearButton:hover {
+    fill: var(--filled-900);
+    stroke: var(--filled-900);
+  }
+}

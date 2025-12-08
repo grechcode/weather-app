@@ -1,0 +1,16 @@
+.tabBar {
+  display: flex;
+  gap: var(--indent-xl);
+}
+
+@media (max-width: 1023px) {
+  .tabBar {
+    gap: var(--indent-l);
+  }
+}
+
+@media (max-width: 767px) {
+  .tabBar {
+    gap: var(--indent-m);
+  }
+}

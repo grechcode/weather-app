@@ -1,0 +1,26 @@
+.content {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  backdrop-filter: blur(25px);
+  transition-duration: var(--transition);
+  transition-property: background-color;
+  border-radius: var(--border-radius);
+  background-color: var(--tone-500);
+  padding: var(--indent-xl) 32px 0;
+  width: 100%;
+  max-width: 1120px;
+  height: fit-content;
+}
+
+@media all and (max-width: 1023px) {
+  .content {
+    padding: var(--indent-l) 24px 0;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .content {
+    padding: var(--indent-m) 16px 0;
+  }
+}

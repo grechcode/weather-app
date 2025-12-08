@@ -1,0 +1,150 @@
+:root {
+  /* FONT FAMILY */
+  --font-family: 'Raleway', sans-serif;
+
+  /* LIGHT TONE COLORS */
+  --light-tone-100: #f5f4f466;
+  --light-tone-200: #dadada66;
+  --light-tone-500: #7070701a;
+  --light-tone-600: #a6a6a6;
+  --light-tone-700: #dadada66;
+  --light-tone-800: #dadada;
+
+  /* DARK TONE COLORS */
+  --dark-tone-100: #1e1e1e99;
+  --dark-tone-200: #26262699;
+  --dark-tone-500: #5555551a;
+  --dark-tone-600: #797979;
+  --dark-tone-700: #262626;
+  --dark-tone-800: #b7b6b6;
+
+  /* LIGHT FILLED COLORS */
+  --light-filled-0: #f5f4f4;
+  --light-filled-100: #f5f4f4;
+  --light-filled-200: #dadada;
+  --light-filled-400: #a6a6a6;
+  --light-filled-500: #8a8a8a;
+  --light-filled-600: #707070;
+  --light-filled-700: #545454;
+  --light-filled-800: #393939;
+  --light-filled-900: #202020;
+
+  /* DARK FILLED COLORS */
+  --dark-filled-0: #f5f4f4;
+  --dark-filled-100: #1c1c1c;
+  --dark-filled-200: #262626;
+  --dark-filled-300: #393939;
+  --dark-filled-400: #b7b6b6;
+  --dark-filled-500: #4e4e4e;
+  --dark-filled-600: #797979;
+  --dark-filled-700: #b7b6b6;
+  --dark-filled-800: #dadada;
+  --dark-filled-900: #f5f4f4;
+
+  /* LIGHT GRADIENTS */
+  --light-gradient-100: linear-gradient(
+    90deg,
+    var(--light-filled-200) 0%,
+    var(--light-filled-500) 20%,
+    var(--light-filled-700) 50%,
+    var(--light-filled-500) 80%,
+    var(--light-filled-200) 100%
+  );
+
+  /* DARK GRADIENTS */
+  --dark-gradient-100: linear-gradient(
+    90deg,
+    var(--dark-filled-200) 0%,
+    var(--dark-filled-500) 20%,
+    var(--dark-filled-700) 50%,
+    var(--dark-filled-500) 80%,
+    var(--dark-filled-200) 100%
+  );
+
+  /* LIGHT SHADOWS */
+  --light-shadow-100: 2px 0px 6px 0px #00000026;
+  --light-shadow-200: -2px 0px 6px 0px #00000026;
+
+  /* DARK SHADOWS */
+  --dark-shadow-100: -4px 0px 8px 0px #00000040;
+  --dark-shadow-200: -4px 0px 8px 0px #00000040;
+
+  /* TYPOGRAPHY - Desktop */
+  --heading-h1: 700 32px/40px var(--font-family);
+  --heading-h2: 700 24px/32px var(--font-family);
+  --heading-h3: 700 16px/20px var(--font-family);
+  --body-lg: 400 20px/24px var(--font-family);
+  --body-md: 400 16px/20px var(--font-family);
+  --body-sm: 400 14px/16px var(--font-family);
+  --body-xs: 400 12px/16px var(--font-family);
+  --body-xxs: 400 10px/12px var(--font-family);
+
+  /* TYPOGRAPHY - Mobile */
+  --mobile-heading-h1: 700 16px/20px var(--font-family);
+  --mobile-heading-h2: 700 12px/16px var(--font-family);
+  --mobile-body-lg: 400 14px/16px var(--font-family);
+  --mobile-body-md: 400 12px/16px var(--font-family);
+  --mobile-body-sm: 400 10px/12px var(--font-family);
+
+  /* RADIUSES */
+  --border-radius: 8px;
+
+  /* TRANSITIONS */
+  --transition: 0.5s;
+
+  /* INDENTS */
+  --indent-xl: 32px;
+  --indent-l: 24px;
+  --indent-m: 16px;
+  --indent-s: 12px;
+  --indent-xs: 8px;
+
+  /* LIGHT-THEME SET */
+  --tone-100: var(--light-tone-100);
+  --tone-200: var(--light-tone-200);
+  --tone-500: var(--light-tone-500);
+  --tone-600: var(--light-tone-600);
+  --tone-700: var(--light-tone-700);
+  --tone-800: var(--light-tone-800);
+
+  --filled-0: var(--light-filled-0);
+  --filled-100: var(--light-filled-100);
+  --filled-200: var(--light-filled-200);
+  --filled-400: var(--light-filled-400);
+  --filled-500: var(--light-filled-500);
+  --filled-600: var(--light-filled-600);
+  --filled-700: var(--light-filled-700);
+  --filled-800: var(--light-filled-800);
+  --filled-900: var(--light-filled-900);
+
+  --gradient-100: var(--light-gradient-100);
+
+  --shadow-100: var(--light-shadow-100);
+  --shadow-200: var(--light-shadow-200);
+}
+
+/* DARK-THEME SET */
+
+[data-theme='dark'] {
+  --tone-100: var(--dark-tone-100);
+  --tone-200: var(--dark-tone-200);
+  --tone-500: var(--dark-tone-500);
+  --tone-600: var(--dark-tone-600);
+  --tone-700: var(--dark-tone-700);
+  --tone-800: var(--dark-tone-800);
+
+  --filled-0: var(--dark-filled-0);
+  --filled-100: var(--dark-filled-100);
+  --filled-200: var(--dark-filled-200);
+  --filled-400: var(--dark-filled-400);
+  --filled-500: var(--dark-filled-500);
+  --filled-600: var(--dark-filled-600);
+  --filled-700: var(--dark-filled-700);
+  --filled-800: var(--dark-filled-800);
+  --filled-900: var(--dark-filled-900);
+
+  --gradient-100: var(--dark-gradient-100);
+
+  --shadow-100: var(--dark-shadow-100);
+  --shadow-200: var(--dark-shadow-200);
+}

@@ -1,0 +1,27 @@
+@keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 0.4;
+  }
+}
+
+.block {
+  position: relative;
+  opacity: 0.4;
+  animation: flash 1.5s infinite;
+  transition-duration: var(--transition);
+  transition-duration: var(--transition);
+  transition-property: opacity;
+  transition-property: background-color;
+  border-radius: var(--border-radius);
+  background: var(--filled-100);
+  min-height: 10px;
+  overflow: hidden;
+}

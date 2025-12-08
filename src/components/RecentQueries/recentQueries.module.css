@@ -1,0 +1,24 @@
+.cleanButton {
+  transition-duration: var(--transition);
+  transition-property: filter, opacity;
+  width: 24px;
+  height: 24px;
+}
+
+.cleanButton:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .cleanButton {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (hover: hover) {
+  .cleanButton:hover {
+    filter: contrast(150%);
+  }
+}

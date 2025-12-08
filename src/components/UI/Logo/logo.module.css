@@ -1,0 +1,45 @@
+.link {
+  width: min-content;
+  height: 48px;
+}
+
+.logoDesktop,
+.logoMobile {
+  fill: var(--light-filled-900);
+}
+
+[data-theme='dark'] .logoDesktop {
+  fill: var(--dark-filled-700);
+}
+
+[data-theme='dark'] .logoMobile {
+  fill: var(--dark-filled-700);
+}
+
+.logoDesktop {
+  cursor: pointer;
+}
+
+.logoMobile {
+  display: none;
+}
+
+@media all and (max-width: 1023px) {
+  .logoDesktop {
+    display: none;
+  }
+
+  .logoMobile {
+    display: inline-block;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .link {
+    height: 32px;
+  }
+  .logoMobile {
+    width: 32px;
+    height: 32px;
+  }
+}
